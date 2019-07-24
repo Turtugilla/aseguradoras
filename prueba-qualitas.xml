@@ -1,0 +1,31 @@
+
+<!-- Petición hecha a el ws http://qbcenter.qualitas.com.mx/wsTarifa/wsTarifa.asmx
+método listaMarcas -->
+<!-- PETICIÓN -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:qbc="http://tempuri.org/WSQBC/QBCDE">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <qbc:listaMarcas>
+         <qbc:cUsuario>usuario</qbc:cUsuario>
+         <qbc:cTarifa>1906</qbc:cTarifa>
+      </qbc:listaMarcas>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+<!-- RESPUESTA  -->
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <soap:Body>
+      <listaMarcasResponse xmlns="http://tempuri.org/WSQBC/QBCDE">
+         <listaMarcasResult>
+            <salida xmlns="">
+               <datos/>
+               <retorno>
+                  <codigo>4</codigo>
+                  <descripcion>El usuario no tiene permisos para la Tarifa solicitada.</descripcion>
+               </retorno>
+            </salida>
+         </listaMarcasResult>
+      </listaMarcasResponse>
+   </soap:Body>
+</soap:Envelope>
